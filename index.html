@@ -126,7 +126,7 @@ $('vo').onclick=e=>{vOn=!vOn;e.currentTarget.classList.toggle('on',vOn);if(!vOn&
 
 // --- motore Gemini con ricerca web ---
 function gkey(){try{return localStorage.getItem('jv_key')||''}catch(e){return''}}
-function gmodel(){try{return localStorage.getItem('jv_model')||'gemini-2.5-flash'}catch(e){return'gemini-2.5-flash'}}
+function gmodel(){try{return localStorage.getItem('jv_model')||'gemini-3.8-flash'}catch(e){return'gemini-2.5-flash'}}
 $('cfg').onclick=()=>{const k=prompt('Chiave API Gemini (resta solo su questo dispositivo):',gkey());if(k===null)return;
  const m=prompt('Modello Gemini:',gmodel());try{localStorage.setItem('jv_key',k.trim());if(m)localStorage.setItem('jv_model',m.trim())}catch(e){}add('JARVIS','Configurazione aggiornata, signore.')};
 async function engine(msgs,out){
